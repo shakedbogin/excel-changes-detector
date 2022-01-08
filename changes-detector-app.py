@@ -5,6 +5,7 @@ import numpy as np
 from bytesbufio import BytesBufferIO
 import pyxlsb 
 import openpyxl
+from xlsxwriter import Workbook
 
 @st.cache
 def to_excel(df):
