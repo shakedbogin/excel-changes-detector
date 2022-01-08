@@ -32,6 +32,7 @@ def highlight_diff(data, color='yellow'):
 st.write('# Highlight Changes Between Excel Sheet Version')
 st.markdown('#')  
 st.write('### This tool will help you spot and compare the changes made in your excel sheet (from previous to current). Simply upload your files and download the outcome.')
+st.write('**The app will only accept ".xlsx" files')
 st.markdown('#')  
 
 st.write("#### Upload your current file (it will be our KEY file)")
