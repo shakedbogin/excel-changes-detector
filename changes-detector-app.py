@@ -2,13 +2,13 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import bytesbufio
+from bytesbufio import BytesBufferIO
 import pyxlsb 
 import openpyxl
 
 @st.cache
 def to_excel(df):
-    output = BytesIO()
+    output = BytesBufferIO()
     writer = pd.ExcelWriter(output, engine='xlsxwriter')
     df.to_excel(writer, sheet_name='Sheet1')  # index=False,
     workbook = writer.book
