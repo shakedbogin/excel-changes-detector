@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import bytesbufio
 import pyxlsb 
-
+import openpyxl
 
 @st.cache
 def to_excel(df):
