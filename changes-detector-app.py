@@ -30,12 +30,9 @@ def highlight_diff(data, color='yellow'):
 
 
 st.write('# Highlight Changes Between Excel Sheet Version')
-st.markdown('#')  # see *
-
+st.markdown('#')  
 st.write('### This tool will help you spot and compare the changes made in your excel sheet (from previous to current). Simply upload your files and download the outcome.')
-
-st.markdown('#')  # see *
-
+st.markdown('#')  
 st.write("#### Upload your current file (it will be our KEY file)")
 
 uploaded_file_a = st.file_uploader('File A (Current)',type = ['xlsx'])
@@ -46,6 +43,7 @@ uploaded_file_b = st.file_uploader('File B (Previous)',type = ['xlsx'])
 
 if uploaded_file_a is not None:
      if uploaded_file_b is not None:
+         st.markdown('#')  
          st.write('### View samples of the data you uploaded')
          dataframe_a = pd.read_excel(uploaded_file_a)
          st.write('#### Current Data Set' )
