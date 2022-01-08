@@ -5,21 +5,19 @@ import numpy as np
 from bytesbufio import BytesBufferIO
 import pyxlsb 
 import openpyxl
-from xlsxwriter import Workbook
+import xlsxwriter
+
 
 @st.cache
 def to_excel(df):
     output = BytesBufferIO()
-    writer = pd.ExcelWriter(output, engine='xlsxwriter')
+    writer = pd.ExcelWriter(output, engine='openpyxl')
     df.to_excel(writer, sheet_name='Sheet1')  # index=False,
     workbook = writer.book
     worksheet = writer.sheets['Sheet1']
-    format1 = workbook.add_format({'num_format': '0.00'})
-    worksheet.set_column('A:A', None, format1)
     writer.save()
     processed_data = output.getvalue()
     return processed_data
-
 
 @st.cache
 def highlight_diff(data, color='yellow'):
