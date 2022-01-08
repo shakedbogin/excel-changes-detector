@@ -5,7 +5,6 @@ import numpy as np
 from bytesbufio import BytesBufferIO
 import pyxlsb 
 import openpyxl
-import xlsxwriter
 
 
 @st.cache
