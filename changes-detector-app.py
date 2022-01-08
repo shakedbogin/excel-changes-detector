@@ -33,8 +33,8 @@ st.write('# Highlight Changes Between Excel Sheet Version')
 st.markdown('#')  
 st.write('### This tool will help you spot and compare the changes made in your excel sheet (from previous to current). Simply upload your files and download the outcome.')
 st.markdown('#')  
-st.write("#### Upload your current file (it will be our KEY file)")
 
+st.write("#### Upload your current file (it will be our KEY file)")
 uploaded_file_a = st.file_uploader('File A (Current)',type = ['xlsx'])
 
 st.write("#### Upload your previous file")
